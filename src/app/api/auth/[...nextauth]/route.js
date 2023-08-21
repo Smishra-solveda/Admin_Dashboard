@@ -20,8 +20,6 @@ const authOptions = {
           const isUserExists = await User.findOne({ email });
 
           if (!isUserExists) {
-          console.log("!!!!");
-
             const res = await fetch("http://localhost:3000/api/user", {
               method: "POST",
               headers: {
@@ -35,7 +33,7 @@ const authOptions = {
             }
           }
         } catch (error) {
-          console.log(error,"!!!!");
+          console.log(error);
         }
       }
 
